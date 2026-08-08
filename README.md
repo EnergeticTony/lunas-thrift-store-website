@@ -19,8 +19,8 @@ Users can navigate to dedicated pages and sections including:
 - About Us (Include Mission, Vision, and Values)
 - Visit the Store - Hours and Location (Section Created on Home Page)
 - Purple Bin Clothing Drive Information (Page Created)
-- Events and Programs (Button Created on Home Page - View Calendar)
-- Volunteer Opportunities
+- Events and Programs (Section Created on Home Page)
+- Volunteer Opportunities (Section Created on Home Page)
 - Partnerships and Collaborations
 - Impact (Include Annual Reports, Strategic Plans, and Dynamic Impact Dashboard)
 - Gallery (Include images, videos, and all media)
@@ -69,3 +69,6 @@ Planned Future Updates
 - Multiple store locations and maps
 - Integration with university sustainability initiatives
 - Expanded impact visualizations and annual report archives
+
+Vite: https://vite.dev/ 
+React: https://react.dev/
