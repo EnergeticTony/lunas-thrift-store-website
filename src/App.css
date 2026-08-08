@@ -4,6 +4,18 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
 .contact-section>div:first-child h3{margin:0 0 24px;font-size:32px}
 
+/* Scroll reveal motion */
+.reveal-section{opacity:0;transform:translateY(44px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,1,.36,1);will-change:opacity,transform}
+.reveal-section.is-visible{opacity:1;transform:translateY(0)}
+.reveal-section>img,.reveal-section .visit-photo,.reveal-section .volunteer-photo,.reveal-section .hero-card,.reveal-section .feature-card,.reveal-section .tagline,.reveal-section .mission-section>img{transition:opacity .8s ease,transform .8s cubic-bezier(.22,1,.36,1)}
+.reveal-section:not(.is-visible)>img,.reveal-section:not(.is-visible) .visit-photo,.reveal-section:not(.is-visible) .volunteer-photo,.reveal-section:not(.is-visible) .hero-card,.reveal-section:not(.is-visible) .feature-card,.reveal-section:not(.is-visible) .tagline{opacity:.55;transform:translateY(18px) scale(.985)}
+.reveal-section:not(.is-visible) .feature-card,.reveal-section:not(.is-visible) .tagline{transform:translateX(22px)}
+.reveal-section .values-grid article,.reveal-section .donation-guides article,.reveal-section .bin-card,.reveal-section .team-card{opacity:0;transform:translateY(28px);transition:opacity .6s ease var(--reveal-delay,0ms),transform .6s cubic-bezier(.22,1,.36,1) var(--reveal-delay,0ms)}
+.reveal-section .values-grid article:nth-child(2){--reveal-delay:90ms}
+.reveal-section .values-grid article:nth-child(3){--reveal-delay:180ms}
+.reveal-section.is-visible .values-grid article,.reveal-section.is-visible .donation-guides article,.reveal-section.is-visible .bin-card,.reveal-section.is-visible .team-card{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.reveal-section,.reveal-section>img,.reveal-section .visit-photo,.reveal-section .volunteer-photo,.reveal-section .hero-card,.reveal-section .feature-card,.reveal-section .tagline,.reveal-section .values-grid article,.reveal-section .donation-guides article,.reveal-section .bin-card,.reveal-section .team-card{opacity:1;transform:none;transition:none;will-change:auto}}
+
 /* Shared homepage rhythm */
 .section-heading h2,.visit-copy h2,.volunteer-section h2,.events-section h2,.contact-section h2{margin-bottom:28px}
 .feature-copy p:last-child,.values-grid p,.visit-copy>p:not(.eyebrow):not(.season-note),.volunteer-section p:not(.eyebrow),.events-section>p:not(.eyebrow),.contact-section>div:first-child>p:not(.eyebrow){font-size:16px;line-height:1.65}
