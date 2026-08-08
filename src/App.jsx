@@ -25,7 +25,7 @@ const acceptableItems = ['Clothing & Shoes', 'Professional Clothing', 'Books & T
 const unacceptableItems = ['Undergarments', 'All Food Items (canned, nonperishable, etc.)', 'Trash', 'Damaged Socks', 'Used Cloth Masks', 'Open or Unsealed Items']
 
 function Logo() {
-  return <a className="brand" href="/" aria-label="Luna’s Thrift Store home"><span className="brand-mark"><img src={logoPhoto} alt="" /></span><span><strong>Luna’s Thrift Store</strong><small>by UCR NRHH</small></span></a>
+  return <NavLink className="brand" to="/" aria-label="Luna’s Thrift Store home"><span className="brand-mark"><img src={logoPhoto} alt="" /></span><span><strong>Luna’s Thrift Store</strong><small>by UCR NRHH</small></span></NavLink>
 }
 
 function Socials() {
