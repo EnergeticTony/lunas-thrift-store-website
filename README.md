@@ -34,9 +34,13 @@ The website may also feature an impact dashboard displaying organizational metri
 ## Project Specs
 
 Frontend: React, HTML5, CSS3, JavaScript (Responsive Web Design)
+
 Backend: Express, NodeJS (only if needed)
+
 Database: MongoDB (only if needed)
-Hosting: GitHub Pages 
+
+Hosting: GitHub Pages
+
 Version Control: Git, GitHub
 
 Figma Wireframe:
