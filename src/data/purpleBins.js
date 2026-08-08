@@ -1,10 +1,10 @@
-import aiPhoto from '../../../assets/IMG_9654.webp'
-import dundeePhoto from '../../../assets/IMG_9655.webp'
-import glenMorPhoto from '../../../assets/IMG_9656.webp'
-import lothianPhoto from '../../../assets/IMG_9657.webp'
-import storePhoto from '../../../assets/IMG_9719.webp'
-import pentlandPhoto from '../../../assets/IMG_9660.webp'
-import stonehavenPhoto from '../../../assets/IMG_0412.webp'
+import aiPhoto from '../../assets/IMG_9654.webp'
+import dundeePhoto from '../../assets/IMG_9655.webp'
+import glenMorPhoto from '../../assets/IMG_9656.webp'
+import lothianPhoto from '../../assets/IMG_9657.webp'
+import storePhoto from '../../assets/IMG_9719.webp'
+import pentlandPhoto from '../../assets/IMG_9660.webp'
+import stonehavenPhoto from '../../assets/IMG_0412.webp'
 
 const housingHoursNote = "Hours are subject to change due to holidays and other circumstances; for updated hours, visit the housing website and check your R'Mail daily."
 

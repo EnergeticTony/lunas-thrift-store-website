@@ -1,9 +1,9 @@
-import anthonyChingPhoto from '../../../assets/IMG_9856.jpeg'
-import nicholasHernandezPhoto from '../../../assets/IMG_9864.jpeg'
-import itzelMoralesPhoto from '../../../assets/IMG_9849.jpeg'
-import haydenLimPhoto from '../../../assets/IMG_9845.jpeg'
-import anthonySantosPhoto from '../../../assets/IMG_0280.jpeg'
-import samaAbusalahPhoto from '../../../assets/IMG_9873.jpeg'
+import anthonyChingPhoto from '../../assets/IMG_9856.jpeg'
+import nicholasHernandezPhoto from '../../assets/IMG_9864.jpeg'
+import itzelMoralesPhoto from '../../assets/IMG_9849.jpeg'
+import haydenLimPhoto from '../../assets/IMG_9845.jpeg'
+import anthonySantosPhoto from '../../assets/IMG_0280.jpeg'
+import samaAbusalahPhoto from '../../assets/IMG_9873.jpeg'
 
 export const executiveCommittee = [
   {
