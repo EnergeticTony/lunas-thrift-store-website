@@ -4,5 +4,6 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/lunas-thrift-store-website/',
+  // This site is deployed at the root of lunas-thrift-store.github.io.
+  base: '/',
 })
