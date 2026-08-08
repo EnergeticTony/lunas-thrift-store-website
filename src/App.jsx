@@ -49,6 +49,24 @@ function RevealSection({ children, className = '', ...props }) {
   return <section ref={sectionRef} className={`reveal-section ${className}`.trim()} {...props}>{children}</section>
 }
 
+function ScrollToHash() {
+  const { hash, pathname } = useLocation()
+
+  useEffect(() => {
+    if (!hash) {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      return
+    }
+
+    const target = document.querySelector(hash)
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [hash, pathname])
+
+  return null
+}
+
 function Logo() {
   return <NavLink className="brand" to="/" aria-label="Luna’s Thrift Store home"><span className="brand-mark"><img src={logoPhoto} alt="" /></span><span><strong>Luna’s Thrift Store</strong><small>by UCR NRHH</small></span></NavLink>
 }
@@ -61,8 +79,14 @@ function Socials() {
 function SiteHeader() {
   const [open, setOpen] = useState(false)
   const { pathname } = useLocation()
-  const learnMoreHref = pathname === '/purple-bin' ? '#drop-off' : pathname === '/leadership' ? '#committee' : '#visit'
-  return <header className="site-header"><Logo /><button className="menu-button" type="button" aria-expanded={open} aria-controls="main-nav" onClick={() => setOpen(!open)}><span aria-hidden="true">{open ? '×' : '☰'}</span><span className="sr-only">Menu</span></button><nav id="main-nav" className={open ? 'open' : ''} aria-label="Main navigation"><NavLink to="/" onClick={() => setOpen(false)}>Home</NavLink><NavLink to="/purple-bin" onClick={() => setOpen(false)}>Purple Bin Clothing Drive</NavLink><NavLink to="/leadership" onClick={() => setOpen(false)}>Our Team</NavLink><a className="button button-outline" href={learnMoreHref} onClick={() => setOpen(false)}>Learn more</a></nav></header>
+  const learnMoreHref = '/#visit'
+  const handleLearnMoreClick = () => {
+    setOpen(false)
+    if (pathname === '/') {
+      requestAnimationFrame(() => document.querySelector('#visit')?.scrollIntoView({ behavior: 'smooth', block: 'start' }))
+    }
+  }
+  return <header className="site-header"><Logo /><button className="menu-button" type="button" aria-expanded={open} aria-controls="main-nav" onClick={() => setOpen(!open)}><span aria-hidden="true">{open ? '×' : '☰'}</span><span className="sr-only">Menu</span></button><nav id="main-nav" className={open ? 'open' : ''} aria-label="Main navigation"><NavLink to="/" onClick={() => setOpen(false)}>Home</NavLink><NavLink to="/purple-bin" onClick={() => setOpen(false)}>Purple Bin Clothing Drive</NavLink><NavLink to="/leadership" onClick={() => setOpen(false)}>Our Team</NavLink><NavLink className="button button-outline" to={learnMoreHref} onClick={handleLearnMoreClick}>Learn more</NavLink></nav></header>
 }
 
 function SiteFooter() {
@@ -112,7 +136,7 @@ function LeadershipPage() {
 }
 
 function App() {
-  return <div id="top"><a className="skip-link" href="#main">Skip to main content</a><SiteHeader /><main id="main"><Routes><Route path="/" element={<HomePage />} /><Route path="/purple-bin" element={<PurpleBinPage />} /><Route path="/leadership" element={<LeadershipPage />} /></Routes></main><SiteFooter /></div>
+  return <div id="top"><ScrollToHash /><a className="skip-link" href="#main">Skip to main content</a><SiteHeader /><main id="main"><Routes><Route path="/" element={<HomePage />} /><Route path="/purple-bin" element={<PurpleBinPage />} /><Route path="/leadership" element={<LeadershipPage />} /></Routes></main><SiteFooter /></div>
 }
 
 export default App
